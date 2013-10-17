@@ -5,9 +5,4 @@ SCRIPT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $SCRIPT_HOME/..
 source dev.env
 
-go get github.com/levicook/glitch
-
-cd $APP_GO
-ulimit -S -n 2048
-
-glitch --after-all-ok='$APP_ROOT/script/restart'
+test -f $APP_PID && kill -HUP `cat $APP_PID`
