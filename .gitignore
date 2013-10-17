@@ -1,11 +1,14 @@
 # Generated application artifacts.
 go-autocomplete-demo
 dist
+
 go/bin
 go/pkg
 go/src/github.com
 go/src/kylelemons.net
+
 js/pkg
+
 tmp
 
 vendor/usgs/*.*

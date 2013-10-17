@@ -1,0 +1,29 @@
+#!/bin/bash
+set -e
+
+SCRIPT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $SCRIPT_HOME/..
+source dev.env
+
+test -d $APP_TMP         || mkdir $APP_TMP
+test -d $APP_DIST        || mkdir $APP_DIST
+test -d $GOPATH          || mkdir $GOPATH
+test -d $GOPATH/bin      || mkdir $GOPATH/bin
+test -d $GOPATH/pkg      || mkdir $GOPATH/pkg
+test -d $GOPATH/src      || mkdir $GOPATH/src
+test -d $APP_GO          || mkdir $APP_GO
+test -d $JSPATH          || mkdir $JSPATH
+test -d $JSPATH/src      || mkdir $JSPATH/src
+test -d $GOPATH/pkg      || mkdir $GOPATH/pkg
+test -d $APP_JS          || mkdir $APP_JS
+test -f $APP_GO/.gitkeep || touch $APP_GO/.gitkeep
+test -f $APP_JS/.gitkeep || touch $APP_JS/.gitkeep
+
+go get github.com/gorilla/mux
+go get kylelemons.net/go/daemon
+
+bower install canjs#2.0.0
+bower install funcunit#2.0.3
+bower install steal#3.2.3
+
+echo 'setup finished. `source dev.env` to configure your shell.'
