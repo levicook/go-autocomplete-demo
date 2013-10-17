@@ -8,6 +8,7 @@ go/src/kylelemons.net
 js/pkg
 tmp
 
+vendor/usgs/*.*
 
 
 # Compiled Object files, Static and Dynamic libs (Shared Objects)

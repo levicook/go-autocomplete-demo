@@ -5,4 +5,5 @@ SCRIPT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $SCRIPT_HOME/..
 source dev.env
 
+go build -o $APP_TMP/$APP_NAME $APP_NAME
 test -f $APP_PID && kill -HUP `cat $APP_PID`
