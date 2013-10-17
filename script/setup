@@ -22,6 +22,7 @@ test -f $APP_JS/.gitkeep || touch $APP_JS/.gitkeep
 go get github.com/gorilla/mux
 go get kylelemons.net/go/daemon
 
+bower install bootstrap#3.0.0
 bower install canjs#2.0.0
 bower install funcunit#2.0.3
 bower install steal#3.2.3
