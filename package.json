@@ -1,0 +1,13 @@
+{
+  "name": "go-autocomplete-demo",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "deamdify": "~0.1.1",
+    "debowerify": "~0.1.8",
+    "decomponentify": "0.0.3",
+    "browserify": "~2.34.3",
+    "grunt-browserify": "~1.2.9",
+    "deglobalify": "0.0.1"
+  }
+}

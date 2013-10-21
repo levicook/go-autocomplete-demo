@@ -1,8 +1,8 @@
 package router
 
 import (
+	"app/routes"
 	"github.com/gorilla/mux"
-	"go-autocomplete-demo/routes"
 	"net/http"
 )
 

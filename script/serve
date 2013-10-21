@@ -5,6 +5,6 @@ SCRIPT_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $SCRIPT_HOME/..
 source dev.env
 
-go build -o $APP_TMP/$APP_NAME $APP_NAME
+go build -o $APP_TMP/$APP_NAME app
 test -f $APP_PID && kill -9 `cat $APP_PID` || echo -n
 $APP_TMP/$APP_NAME -log-level=3 -pid=$APP_PID -fork=true 2>&1 | tee -a $APP_LOG

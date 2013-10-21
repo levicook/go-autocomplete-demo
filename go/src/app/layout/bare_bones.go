@@ -1,8 +1,8 @@
 package layout
 
 import (
+	"app/fail"
 	"bytes"
-	"go-autocomplete-demo/fail"
 	"html/template"
 	"io"
 )

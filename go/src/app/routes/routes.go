@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"go-autocomplete-demo/pages/hello"
+	"app/pages/hello"
 	"net/http"
 )
 

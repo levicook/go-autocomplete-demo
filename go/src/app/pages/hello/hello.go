@@ -1,10 +1,8 @@
 package hello
 
 import (
+	"app/layout"
 	"bytes"
-	//"fmt"
-	"go-autocomplete-demo/layout"
-	//"go-autocomplete-demo/steal"
 	"net/http"
 )
 
@@ -18,9 +16,7 @@ func Hello(w http.ResponseWriter, r *http.Request) {
 
 	// build head
 	var head bytes.Buffer
-	must(layout.WriteCssLinkTags(&head,
-		//steal.CssFor("app-js/pages/hello"),
-	))
+	must(layout.WriteCssLinkTags(&head)) // TODO cssFor("pages/hello"),
 
 	// build main
 	var main bytes.Buffer
@@ -29,9 +25,7 @@ func Hello(w http.ResponseWriter, r *http.Request) {
 	// build tail
 	var tail bytes.Buffer
 	must(layout.WriteDataPool(&tail, dataPool))
-	must(layout.WriteScriptTags(&tail,
-		//steal.JsFor("app-js/pages/hello"),
-	))
+	must(layout.WriteScriptTags(&tail)) // TODO jsFor("pages/hello"),
 
 	// build page
 	page := layout.BareBones{
