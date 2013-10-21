@@ -18,27 +18,32 @@ module.exports = function(grunt) {
                 exclude: ['js/src/**/*_test.js'],
                 directives: {
                     browser: true,
-                    predef: ['console', 'module']
+                    predef: ['console', 'exports', 'module', 'require']
                 }
             },
             test: {
                 src: ['js/src/**/*_test.js'],
                 directives: {
                     browser: true,
-                    predef: ['console', 'module']
+                    predef: ['console', 'exports', 'module', 'require']
                 }
             }
+        },
+        nodeunit: {
+            all: ['js/src/**/*_test.js']
         },
         watch: {
             files: ['js/src/**/*.js'],
             tasks: [
                 'jslint',
+                'nodeunit',
                 'browserify'
             ]
         }
     });
 
     grunt.loadNpmTasks('grunt-browserify')
+    grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-jslint');
 

@@ -20,7 +20,7 @@ func main() {
 	go func() {
 		http.Handle("/", router.New())
 
-		//router.ServeDir("/js/", "js/src/")
+		router.ServeDir("/js/", "js/pkg/")
 
 		if err := http.ListenAndServe(":8080", nil); err != nil {
 			log.Fatal(err)
