@@ -6,6 +6,7 @@ go/pkg
 go/src/github.com
 go/src/kylelemons.net
 
+js/pkg
 node_modules
 
 tmp
